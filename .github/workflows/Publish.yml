@@ -1,0 +1,30 @@
+name: "Publish"
+on:
+  push:
+    branches:
+      - main
+  release:
+    types:
+      - created
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Release Publish
+        if: github.event_name == 'release'
+        run: npm run publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_ORG_TOKEN }}
+
+      - name: Release Publish Next
+        if: github.event_name != 'release'
+        run: npm run publish --tag next
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_ORG_TOKEN }}
