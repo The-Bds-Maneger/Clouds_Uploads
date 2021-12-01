@@ -10,14 +10,14 @@ class UploadFile {
     const ReturnFunction = {};
     ReturnFunction.upload = {
       GoogleDriver: true,
-      OracleCloudInfrastructure: true,
-      Azure: true
+      OracleCloudInfrastructure: false,
+      Azure: false
     };
     ReturnFunction.Result = {};
     ReturnFunction.CloudPath = {
-      GoogleDriver: "",
-      OracleCloudInfrastructure: "",
-      Azure: ""
+      GoogleDriver: "test.txt",
+      OracleCloudInfrastructure: "test.txt",
+      Azure: "test.txt"
     };
     ReturnFunction.Start = async () => {
       // Upload to Google Driver
