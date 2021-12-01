@@ -6,6 +6,10 @@
   "author": "Sirherobrine23 <srherobrine20@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/The-Bds-Maneger/Clouds_Uploads#readme",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     "require": "./src/cjs/index.js",
     "import": "./src/esm/index.js"
