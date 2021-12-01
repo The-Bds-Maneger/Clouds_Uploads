@@ -1,0 +1,44 @@
+{
+  "name": "@the-bds-maneger/clouds_uploads",
+  "version": "0.1.0",
+  "description": "Upload Files to Cloud with one Package",
+  "main": "src/cjs/index.js",
+  "author": "Sirherobrine23 <srherobrine20@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/The-Bds-Maneger/Clouds_Uploads#readme",
+  "exports": {
+    "require": "./src/cjs/index.js",
+    "import": "./src/esm/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/The-Bds-Maneger/Clouds_Uploads.git"
+  },
+  "keywords": [
+    "Clouds",
+    "Google Driver",
+    "Oracle Cloud",
+    "Azure Blob"
+  ],
+  "bugs": {
+    "url": "https://github.com/The-Bds-Maneger/Clouds_Uploads/issues"
+  },
+  "scripts": {
+    "test": "mocha",
+    "prepublish": "cjs2esm",
+    "esm_module": "cjs2esm"
+  },
+  "dependencies": {
+    "@azure/storage-blob": "^12.8.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.5.1",
+    "googleapis": "^92.0.0",
+    "oci-sdk": "^2.9.0",
+    "open": "^8.4.0"
+  },
+  "devDependencies": {
+    "cjs2esm": "^2.0.2"
+  }
+}
